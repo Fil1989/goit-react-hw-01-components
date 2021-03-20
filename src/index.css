@@ -12,7 +12,8 @@ code {
     monospace;
 }
 .profile {
-  margin-left: 20px;
+  margin: auto;
+
   width: 300px;
   padding-top: 20px;
   object-fit: contain;
