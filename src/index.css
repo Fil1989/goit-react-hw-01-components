@@ -18,6 +18,8 @@ code {
   padding-top: 20px;
   object-fit: contain;
   border: 1px solid #c0c0c0;
+  border-radius: 3px;
+  box-shadow: 3px 3px #f6f6f6;
   /* background: gray; */
 }
 .description {
@@ -59,8 +61,18 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #c0c0c0;
+  /* border: 1px 1px 0 0 solid #c0c0c0; */
+  border-top: 1px;
+  border-right: 1px;
+  border-left: 0px;
+  border-bottom: 0px;
+  border-style: solid;
+  border-color: #c0c0c0;
+  border-collapse: collapse;
   background: #f6f6f6;
-  width: 100px;
+  width: 33%;
   height: 100px;
+}
+.stats li:last-child {
+  border-right: 0px;
 }
