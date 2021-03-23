@@ -76,3 +76,45 @@ code {
 .stats li:last-child {
   border-right: 0px;
 }
+.whole-uploads {
+  width: 400px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.uploads {
+  display: flex;
+}
+.uploads__title {
+  text-align: center;
+}
+.uploads__stats {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  width: 25%;
+  list-style: none;
+  margin: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+.uploads__stats--percentage {
+  font-size: 1.2em;
+}
+.uploads__stats:nth-child(4) {
+  background-color: tomato;
+}
+
+.uploads__stats:nth-child(1) {
+  background-color: green;
+}
+
+.uploads__stats:nth-child(2) {
+  background-color: blue;
+}
+
+.uploads__stats:nth-child(3) {
+  background-color: orange;
+}

@@ -1,4 +1,6 @@
-const NewComponent = ({ user }) => (
+import Proptypes from "prop-types";
+
+const Profile = ({ user }) => (
   <>
     <div class="profile">
       <div class="description">
@@ -26,4 +28,14 @@ const NewComponent = ({ user }) => (
   </>
 );
 
-export default NewComponent;
+// Profile.propTypes = {
+//   avatar: Proptypes.string,
+//   name: Proptypes.string.isRequired,
+//   tag: Proptypes.string.isRequired,
+//   location: Proptypes.string.isRequired,
+//   followers: Proptypes.number.isRequired,
+//   views: Proptypes.number.isRequired,
+//   likes: Proptypes.number.isRequired,
+// };
+
+export default Profile;
