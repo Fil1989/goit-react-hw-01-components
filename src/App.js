@@ -3,8 +3,10 @@ import Statistics from "./components/Statistics";
 import user from "./data/user.json";
 import theStatistics from "./data/statistical-data.json";
 import myFriends from "./data/friends.json";
+import allTransactions from "./data/transactions.json";
 import { element } from "prop-types";
 import Friends from "./components/Friends";
+import Transactions from "./components/Transactions";
 
 const App = () => {
   let mass = [];
@@ -37,6 +39,21 @@ const App = () => {
           <Friends name={el.name} avatar={el.avatar} isOnline={el.isOnline} />
         ))}
       </ul>
+      <table className="transaction-history">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {allTransactions.map((el) => (
+            <Transactions info={el} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

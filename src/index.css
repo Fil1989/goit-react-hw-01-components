@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 body {
@@ -170,4 +172,25 @@ code {
 }
 .name {
   font-size: 1.8em;
+}
+.transaction-history {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+.transaction-history__cell {
+  text-align: center;
+  border: 1px solid #ffffff;
+  padding: 10px 0;
+}
+
+.transaction-history th {
+  border: 1px solid #ffffff;
+  background-color: #1565c0;
+  padding: 10px 0;
+
+  color: #ffffff;
+}
+.transaction-history__tr:nth-child(2n) {
+  background-color: #bbdefb;
 }
