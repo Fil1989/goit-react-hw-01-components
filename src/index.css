@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -25,6 +28,7 @@ code {
 .description {
   text-align: center;
   line-height: 5px;
+  width: inherit;
 }
 .avatar {
   width: 100px;
@@ -50,7 +54,7 @@ code {
   display: flex;
   flex-direction: row;
   list-style: none;
-  margin-left: -40px;
+  padding-inline-start: 0px;
   margin-right: 0;
   margin-bottom: 0;
   margin-top: 40px;
@@ -70,7 +74,7 @@ code {
   border-color: #c0c0c0;
   border-collapse: collapse;
   background: #f6f6f6;
-  width: 33%;
+  width: 34%;
   height: 100px;
 }
 .stats li:last-child {
@@ -86,35 +90,84 @@ code {
 }
 .uploads {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .uploads__title {
   text-align: center;
 }
 .uploads__stats {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   width: 25%;
   list-style: none;
   margin: 0;
   color: #ffffff;
   font-weight: bold;
+  border-top: 1px;
+  border-style: solid;
+  border-color: #ffffff;
 }
 .uploads__stats--percentage {
   font-size: 1.2em;
 }
-.uploads__stats:nth-child(4) {
+
+.uploads__stats:nth-child(4n + 1) {
+  background-color: green;
+  border-right: 1px;
+}
+
+.uploads__stats:nth-child(4n + 2) {
+  background-color: blue;
+  border-right: 1px;
+}
+
+.uploads__stats:nth-child(4n + 3) {
+  background-color: orange;
+  border-right: 1px;
+}
+
+.uploads__stats:nth-child(4n + 4) {
   background-color: tomato;
 }
-
-.uploads__stats:nth-child(1) {
+.friends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  list-style: none;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0px 3px 3px rgba(103, 128, 159, 1),
+    0px -1px 1px rgba(103, 128, 159, 1), -1px 0px 1px rgba(103, 128, 159, 1),
+    1px 0px 1px rgba(103, 128, 159, 1);
+  width: 350px;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+.friend-avatar {
+  border-radius: 5px;
+  margin: 0 20px 0 30px;
+  width: 80px;
+  border: 1px solid rgba(103, 128, 159, 1);
+}
+.online,
+.offline {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.online {
   background-color: green;
 }
-
-.uploads__stats:nth-child(2) {
-  background-color: blue;
+.offline {
+  background-color: red;
 }
-
-.uploads__stats:nth-child(3) {
-  background-color: orange;
+.name {
+  font-size: 1.8em;
 }

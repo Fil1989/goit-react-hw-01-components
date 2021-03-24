@@ -1,12 +1,14 @@
 import Profile from "./components/Profile";
 import Statistics from "./components/Statistics";
 import user from "./data/user.json";
-import statistica from "./data/statistical-data.json";
+import theStatistics from "./data/statistical-data.json";
+import myFriends from "./data/friends.json";
 import { element } from "prop-types";
+import Friends from "./components/Friends";
 
 const App = () => {
   let mass = [];
-  statistica.filter((el) => {
+  theStatistics.filter((el) => {
     let someProperty = el.label;
     let elementToFind = mass.find((element) => element.label === someProperty);
     if (elementToFind) {
@@ -30,6 +32,11 @@ const App = () => {
           ))}
         </div>
       </div>
+      <ul className="friends">
+        {myFriends.map((el) => (
+          <Friends name={el.name} avatar={el.avatar} isOnline={el.isOnline} />
+        ))}
+      </ul>
     </div>
   );
 };
