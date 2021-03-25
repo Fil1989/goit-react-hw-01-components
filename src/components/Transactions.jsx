@@ -1,8 +1,8 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const Transactions = ({ info }) => {
   return (
-    <tr className="transaction-history__tr">
+    <tr key={info.id} className="transaction-history__tr">
       <td className="transaction-history__cell">{info.type}</td>
       <td className="transaction-history__cell">{info.amount}</td>
       <td className="transaction-history__cell">{info.currency}</td>
@@ -10,10 +10,12 @@ const Transactions = ({ info }) => {
   );
 };
 
-// Transactions.propTypes = {
-//   info.type: PropTypes.string.isRequired,
-//   info.amount: PropTypes.number.isRequired,
-//   info.currency:PropTypes.string.isRequired,
-// };
+Transactions.propTypes = {
+  user: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
+  }),
+};
 
 export default Transactions;

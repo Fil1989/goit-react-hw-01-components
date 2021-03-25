@@ -10,8 +10,8 @@ import Transactions from "./components/Transactions";
 const App = () => {
   let mass = [];
   theStatistics.filter((el) => {
-    let someProperty = el.label;
-    let elementToFind = mass.find((element) => element.label === someProperty);
+    let propertyOfEl = el.label;
+    let elementToFind = mass.find((element) => element.label === propertyOfEl);
     if (elementToFind) {
       elementToFind.percentage += el.percentage;
       return false;
@@ -29,13 +29,22 @@ const App = () => {
         <h3 className="uploads__title">UPLOAD STATS</h3>
         <div className="uploads">
           {mass.map((el) => (
-            <Statistics label={el.label} percentage={el.percentage} />
+            <Statistics
+              key={el.id}
+              label={el.label}
+              percentage={el.percentage}
+            />
           ))}
         </div>
       </div>
       <ul className="friends">
         {myFriends.map((el) => (
-          <Friends name={el.name} avatar={el.avatar} isOnline={el.isOnline} />
+          <Friends
+            key={el.id}
+            name={el.name}
+            avatar={el.avatar}
+            isOnline={el.isOnline}
+          />
         ))}
       </ul>
       <table className="transaction-history">

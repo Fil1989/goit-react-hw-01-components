@@ -1,4 +1,4 @@
-import Proptypes from "prop-types";
+import propTypes from "prop-types";
 
 const Profile = ({ user }) => (
   <div className="profile">
@@ -25,19 +25,25 @@ const Profile = ({ user }) => (
     </ul>
   </div>
 );
+Profile.defaultProps = {
+  user: {
+    avatar:
+      "https://cdn.pixabay.com/photo/2020/05/18/20/50/dog-5188376_960_720.jpg",
+  },
+};
 
-// Profile.propTypes = {
-//   user: {
-//     avatar: Proptypes.string,
-//     name: Proptypes.string.isRequired,
-//     tag: Proptypes.string.isRequired,
-//     location: Proptypes.string.isRequired,
-//     stats: {
-//       followers: Proptypes.number.isRequired,
-//       views: Proptypes.number.isRequired,
-//       likes: Proptypes.number.isRequired,
-//     },
-//   },
-// };
+Profile.propTypes = {
+  user: propTypes.shape({
+    avatar: propTypes.string,
+    name: propTypes.string.isRequired,
+    tag: propTypes.string.isRequired,
+    location: propTypes.string.isRequired,
+    stats: propTypes.shape({
+      followers: propTypes.number.isRequired,
+      views: propTypes.number.isRequired,
+      likes: propTypes.number.isRequired,
+    }),
+  }),
+};
 
 export default Profile;

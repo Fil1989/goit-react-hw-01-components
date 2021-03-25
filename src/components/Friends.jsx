@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 import IsOnlineMarker from "./IsOnlineMarker";
-const Friends = ({ avatar, name, isOnline }) => {
+const Friends = ({ avatar, name, isOnline, id }) => {
   return (
     <>
-      <li className="item">
+      <li key={id} className="item">
         <IsOnlineMarker isOnline={isOnline} />
         <img className="friend-avatar" src={avatar} alt="" width="48" />
         <p className="name">{name}</p>
@@ -19,7 +19,6 @@ Friends.defaultProps = {
 };
 Friends.propTypes = {
   name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
 };
 
 export default Friends;
