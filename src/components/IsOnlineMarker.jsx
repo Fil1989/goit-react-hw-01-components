@@ -1,9 +1,8 @@
-const IsOnlineMarker = ({ isOnline }) => {
-  let isOnlineForRender;
-  return (isOnlineForRender = isOnline ? (
-    <span class="online"></span>
+const IsOnlineMarker = ({ isOnline }) =>
+  isOnline ? (
+    <span className="online"></span>
   ) : (
-    <span class="offline"></span>
-  ));
-};
+    <span className="offline"></span>
+  );
+
 export default IsOnlineMarker;

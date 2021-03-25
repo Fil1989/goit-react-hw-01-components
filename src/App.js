@@ -4,7 +4,6 @@ import user from "./data/user.json";
 import theStatistics from "./data/statistical-data.json";
 import myFriends from "./data/friends.json";
 import allTransactions from "./data/transactions.json";
-import { element } from "prop-types";
 import Friends from "./components/Friends";
 import Transactions from "./components/Transactions";
 
@@ -26,7 +25,7 @@ const App = () => {
     <div className="App">
       <h1>Hello from react</h1>
       <Profile user={user} />
-      <div class="whole-uploads">
+      <div className="whole-uploads">
         <h3 className="uploads__title">UPLOAD STATS</h3>
         <div className="uploads">
           {mass.map((el) => (
