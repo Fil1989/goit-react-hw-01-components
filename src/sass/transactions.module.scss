@@ -1,0 +1,21 @@
+.transaction_history {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+.transaction_history__cell {
+  text-align: center;
+  border: 1px solid #ffffff;
+  padding: 10px 0;
+}
+
+.transaction_history th {
+  border: 1px solid #ffffff;
+  background-color: #1565c0;
+  padding: 10px 0;
+
+  color: #ffffff;
+}
+.transaction_history__tr:nth-child(2n) {
+  background-color: #bbdefb;
+}

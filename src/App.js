@@ -1,22 +1,28 @@
-import Profile from "./components/Profile";
-import Statistics from "./components/Statistics";
-import user from "./data/user.json";
-import theStatistics from "./data/statistical-data.json";
-import myFriends from "./data/friends.json";
-import allTransactions from "./data/transactions.json";
-import Friends from "./components/Friends";
-import Transactions from "./components/Transactions";
+import friends from './sass/friends.module.scss';
+import statistics from './sass/statistics.module.scss';
+import transactions from './sass/transactions.module.scss';
+
+import Profile from './components/Profile';
+import Statistics from './components/Statistics';
+import user from './data/user.json';
+import theStatistics from './data/statistical-data.json';
+import myFriends from './data/friends.json';
+import allTransactions from './data/transactions.json';
+import Friends from './components/Friends';
+import Transactions from './components/Transactions';
 
 const App = () => {
-  let mass = [];
-  theStatistics.filter((el) => {
+  let arrayOfUniqueStats = [];
+  theStatistics.filter(el => {
     let propertyOfEl = el.label;
-    let elementToFind = mass.find((element) => element.label === propertyOfEl);
+    let elementToFind = arrayOfUniqueStats.find(
+      element => element.label === propertyOfEl,
+    );
     if (elementToFind) {
       elementToFind.percentage += el.percentage;
       return false;
     } else {
-      mass.push(el);
+      arrayOfUniqueStats.push(el);
       return true;
     }
   });
@@ -25,10 +31,10 @@ const App = () => {
     <div className="App">
       <h1>Hello from react</h1>
       <Profile user={user} />
-      <div className="whole-uploads">
-        <h3 className="uploads__title">UPLOAD STATS</h3>
-        <div className="uploads">
-          {mass.map((el) => (
+      <div className={statistics.wholeUploads}>
+        <h3 className={statistics.uploads__title}>UPLOAD STATS</h3>
+        <div className={statistics.uploads}>
+          {arrayOfUniqueStats.map(el => (
             <Statistics
               key={el.id}
               label={el.label}
@@ -37,8 +43,8 @@ const App = () => {
           ))}
         </div>
       </div>
-      <ul className="friends">
-        {myFriends.map((el) => (
+      <ul className={friends.friends}>
+        {myFriends.map(el => (
           <Friends
             key={el.id}
             name={el.name}
@@ -47,7 +53,7 @@ const App = () => {
           />
         ))}
       </ul>
-      <table className="transaction-history">
+      <table className={transactions.transaction_history}>
         <thead>
           <tr>
             <th>Type</th>
@@ -57,7 +63,7 @@ const App = () => {
         </thead>
 
         <tbody>
-          {allTransactions.map((el) => (
+          {allTransactions.map(el => (
             <Transactions info={el} />
           ))}
         </tbody>

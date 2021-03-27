@@ -1,0 +1,48 @@
+.wholeUploads {
+  width: 400px;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.uploads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.uploads__title {
+  text-align: center;
+}
+.uploads__stats {
+  width: 25%;
+  list-style: none;
+  margin: 0;
+  color: #ffffff;
+  font-weight: bold;
+  border-top: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+}
+.uploads__stats_percentage {
+  font-size: 1.2em;
+}
+
+.uploads__stats:nth-child(4n + 1) {
+  background-color: green;
+  border-right: 1px;
+}
+
+.uploads__stats:nth-child(4n + 2) {
+  background-color: blue;
+  border-right: 1px;
+}
+
+.uploads__stats:nth-child(4n + 3) {
+  background-color: orange;
+  border-right: 1px;
+}
+
+.uploads__stats:nth-child(4n + 4) {
+  background-color: tomato;
+}

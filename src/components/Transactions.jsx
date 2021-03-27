@@ -1,11 +1,14 @@
-import PropTypes from "prop-types";
+import transactions from '../sass/transactions.module.scss';
+import PropTypes from 'prop-types';
 
 const Transactions = ({ info }) => {
   return (
-    <tr key={info.id} className="transaction-history__tr">
-      <td className="transaction-history__cell">{info.type}</td>
-      <td className="transaction-history__cell">{info.amount}</td>
-      <td className="transaction-history__cell">{info.currency}</td>
+    <tr key={info.id} className={transactions.transaction_history__tr}>
+      <td className={transactions.transaction_history__cell}>{info.type}</td>
+      <td className={transactions.transaction_history__cell}>{info.amount}</td>
+      <td className={transactions.transaction_history__cell}>
+        {info.currency}
+      </td>
     </tr>
   );
 };

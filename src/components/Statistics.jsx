@@ -1,10 +1,12 @@
-import PropTypes from "prop-types";
+import statistics from '../sass/statistics.module.scss';
+
+import PropTypes from 'prop-types';
 
 const Statistics = ({ id, label, percentage }) => (
-  <ul key={id} className="uploads__stats">
+  <ul key={id} className={statistics.uploads__stats}>
     <li>
-      <p className="uploads__stats--label">{label}</p>
-      <p className="uploads__stats--percentage">{percentage}%</p>
+      <p className={statistics.uploads__stats_label}>{label}</p>
+      <p className={statistics.uploads__stats_percentage}>{percentage}%</p>
     </li>
   </ul>
 );
