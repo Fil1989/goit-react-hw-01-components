@@ -3,13 +3,11 @@ import React from "react";
 import IsOnlineMarker from "./IsOnlineMarker";
 const Friends = ({ avatar, name, isOnline, id }) => {
   return (
-    <>
       <li key={id} className="item">
         <IsOnlineMarker isOnline={isOnline} />
         <img className="friend-avatar" src={avatar} alt="" width="48" />
         <p className="name">{name}</p>
       </li>
-    </>
   );
 };
 
