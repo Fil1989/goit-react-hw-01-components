@@ -1,6 +1,6 @@
 import profile from './profile.module.scss';
 
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Profile = ({ user }) => (
   <div className={profile.profile}>
@@ -39,15 +39,15 @@ Profile.defaultProps = {
 };
 
 Profile.propTypes = {
-  user: propTypes.shape({
-    avatar: propTypes.string,
-    name: propTypes.string.isRequired,
-    tag: propTypes.string.isRequired,
-    location: propTypes.string.isRequired,
-    stats: propTypes.shape({
-      followers: propTypes.number.isRequired,
-      views: propTypes.number.isRequired,
-      likes: propTypes.number.isRequired,
+  user: PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
     }),
   }),
 };
