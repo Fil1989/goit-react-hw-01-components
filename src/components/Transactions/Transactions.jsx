@@ -1,4 +1,4 @@
-import transactions from '../sass/transactions.module.scss';
+import transactions from './transactions.module.scss';
 import PropTypes from 'prop-types';
 
 const Transactions = ({ info }) => {

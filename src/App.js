@@ -1,15 +1,15 @@
-import friends from './sass/friends.module.scss';
-import statistics from './sass/statistics.module.scss';
-import transactions from './sass/transactions.module.scss';
+import friends from './components/Friends/friends.module.scss';
+import statistics from './components/Statistics/statistics.module.scss';
+import transactions from './components/Transactions/transactions.module.scss';
 
-import Profile from './components/Profile';
-import Statistics from './components/Statistics';
+import Profile from './components/Profile/Profile';
+import Statistics from './components/Statistics/Statistics';
 import user from './data/user.json';
 import theStatistics from './data/statistical-data.json';
 import myFriends from './data/friends.json';
 import allTransactions from './data/transactions.json';
-import Friends from './components/Friends';
-import Transactions from './components/Transactions';
+import Friends from './components/Friends/Friends';
+import Transactions from './components/Transactions/Transactions';
 
 const App = () => {
   let arrayOfUniqueStats = [];

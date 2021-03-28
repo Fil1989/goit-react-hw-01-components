@@ -1,4 +1,4 @@
-import statistics from '../sass/statistics.module.scss';
+import statistics from './statistics.module.scss';
 
 import PropTypes from 'prop-types';
 

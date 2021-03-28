@@ -1,4 +1,4 @@
-import profile from '../sass/profile.module.scss';
+import profile from './profile.module.scss';
 
 import propTypes from 'prop-types';
 

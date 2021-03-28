@@ -1,4 +1,4 @@
-import friends from '../sass/friends.module.scss';
+import friends from './friends.module.scss';
 import PropTypes from 'prop-types';
 import React from 'react';
 import IsOnlineMarker from './IsOnlineMarker';
