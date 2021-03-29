@@ -14,9 +14,9 @@ const Transactions = ({ info }) => {
 };
 
 Transactions.propTypes = {
-  user: PropTypes.shape({
+  info: PropTypes.shape({
     type: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired,
+    amount: PropTypes.string.isRequired,
     currency: PropTypes.string.isRequired,
   }),
 };
